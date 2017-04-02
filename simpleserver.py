@@ -14,7 +14,7 @@ class WebServerHandler(BaseHTTPRequestHandler):
             print(message)
             return
         else:
-            self.send_error(404, 'File Not Found: %s' % self.path)
+            self.send_error(404, 'File Not Found by YOU: %s' % self.path)
 
 
 def main():
