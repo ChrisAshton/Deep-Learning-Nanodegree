@@ -19,9 +19,9 @@ class WebServerHandler(BaseHTTPRequestHandler):
 
 def main():
     try:
-        port = 8080
+        port = 80
         server = HTTPServer(('', port), WebServerHandler)
-        print("Web Server running on port %s") % port
+        print("Web Server running on port 80")
         server.serve_forever()
     except KeyboardInterrupt:
         print(" ^C entered, stopping web server....")
