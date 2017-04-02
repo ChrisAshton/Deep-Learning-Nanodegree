@@ -11,7 +11,7 @@ class WebServerHandler(BaseHTTPRequestHandler):
             message = ""
             message += "<html><body>Hello!</body></html>"
             self.wfile.write(message)
-            print message
+            print(message)
             return
         else:
             self.send_error(404, 'File Not Found: %s' % self.path)
