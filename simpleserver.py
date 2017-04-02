@@ -1,5 +1,5 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
-
+import sys
 
 class WebServerHandler(BaseHTTPRequestHandler):
 
@@ -19,7 +19,7 @@ class WebServerHandler(BaseHTTPRequestHandler):
 
 def main():
     try:
-        port = 80
+        port = int(sys.argv[1])
         server = HTTPServer(('', port), WebServerHandler)
         print("Web Server running on port 80")
         server.serve_forever()
